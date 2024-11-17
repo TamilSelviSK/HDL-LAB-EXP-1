@@ -1,11 +1,14 @@
-SIMULATION AND IMPLEMENTATION OF LOGIC GATES
-AIM:
+# SIMULATION AND IMPLEMENTATION OF LOGIC GATES
+
+## AIM:
+
 To design and simulate a 4:1 Multiplexer (MUX) using Verilog HDL in four different modeling styles—Gate-Level, Data Flow, Behavioral, and Structural—and to verify its functionality through a testbench using the Vivado 2023.1 simulation environment. The experiment aims to understand how different abstraction levels in Verilog can be used to describe the same digital logic circuit and analyze their performance.
 
-APPARATUS REQUIRED:
+
+## APPARATUS REQUIRED:
 Vivado 2023.1
 
-Procedure
+## Procedure
 1. Launch Vivado
 Open Vivado 2023.1 by double-clicking the Vivado icon or searching for it in the Start menu.
 2. Create a New Project
@@ -51,15 +54,15 @@ You can include the timing diagram from the simulation window showing the correc
 10. Close the Simulation
 Once done, close the simulation by going to Simulation → "Close Simulation".
 
-Logic Diagram
+## Logic Diagram
 
 ![image](https://github.com/user-attachments/assets/d4ab4bc3-12b0-44dc-8edb-9d586d8ba856)
 
-Truth Table
+## Truth Table
 
 ![image](https://github.com/user-attachments/assets/c850506c-3f6e-4d6b-8574-939a914b2a5f)
 
-Verilog Code
+## Verilog Code
 
 4:1 MUX Gate-Level Implementation
 
@@ -131,7 +134,7 @@ or_gate u7(out, T1, T2, T3, T4);
 endmodule 
 ![image](https://github.com/user-attachments/assets/d7a504ec-2c75-4091-9525-c0ec10bf9042)
 
-Testbench Implementation
+## Testbench Implementation
 
 // mux4_to_1_tb.v
 `timescale 1ns / 1ps
@@ -221,7 +224,7 @@ module mux4_to_1_tb;
 endmodule
 
 
-Sample Output
+## Sample Output
 
 Time=0 | S1=0 S0=0 | Inputs: A=0 B=0 C=0 D=0 | Y_gate=0 | Y_dataflow=0 | Y_behavioral=0 | Y_structural=0
 Time=10 | S1=0 S0=0 | Inputs: A=0 B=0 C=0 D=0 | Y_gate=0 | Y_dataflow=0 | Y_behavioral=0 | Y_structural=0
@@ -230,7 +233,7 @@ Time=30 | S1=0 S0=1 | Inputs: A=0 B=0 C=0 D=1 | Y_gate=0 | Y_dataflow=0 | Y_beha
 Time=40 | S1=1 S0=0 | Inputs: A=0 B=0 C=0 D=1 | Y_gate=0 | Y_dataflow=0 | Y_behavioral=0 | Y_structural=0
 ...
 
-Conclusion:
+## Conclusion:
 
 In this experiment, a 4:1 Multiplexer was successfully designed and simulated using Verilog HDL across four different modeling styles: Gate-Level, Data Flow, Behavioral, and Structural. The simulation results verified the correct functionality of the MUX, with all implementations producing identical outputs for the given input conditions.
 
